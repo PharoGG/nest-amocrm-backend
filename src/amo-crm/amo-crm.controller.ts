@@ -7,7 +7,7 @@ export class AmoCrmController {
 
   @Post('leads')
   async createLead(@Body() data: any) {
-    return { id: await this.amoCrmService.createLead(data) };
+    return await this.amoCrmService.createLead(data);
   }
 
   @Post('contacts')
